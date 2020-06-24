@@ -5,7 +5,9 @@
 Ext.application({
     name: 'ProjectManager',
 
+    requires: ['ProjectManager.view.Viewport'],
+
     launch: function () {
-        Ext.Msg.alert('Hello Ext JS', 'Hello! Welcome to Ext JS.');
+        var viewport = Ext.create('ProjectManager.view.Viewport');
     }
 });

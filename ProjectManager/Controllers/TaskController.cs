@@ -20,9 +20,11 @@ namespace ProjectManager.Controllers
 
         // GET: api/Task/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public string Get(string id)
         {
-            return "value";
+            if (id == "root") {
+                return "{text:'MyRoot',id:0,expanded:true,children:[{text:'Child1',id:1},{text:'Child2',id:2}]}";
+            }
         }
 
         // POST: api/Task
